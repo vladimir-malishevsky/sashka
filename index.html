@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sanya Krasav4ik!!</h1>
+    <h1>Sanya Krasav4ik <span id="alert"></span></h1>
+
+    <script>
+        const alert = document.getElementById('alert')
+        setInterval(() => {
+            alert.innerText = alert.innerText + '!'
+            if (alert.innerText.length > 5) {
+                alert.innerText = ''
+            }
+        }, 300)
+    </script>
 </body>
 </html>
