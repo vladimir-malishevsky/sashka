@@ -8,6 +8,8 @@
 <body>
     <h1>Sanya Krasav4ik <span id="alert"></span></h1>
 
+    <h2>Date: <span id="time">Loading...</span></h2>
+
     <script>
         const alert = document.getElementById('alert')
         setInterval(() => {
@@ -16,6 +18,12 @@
                 alert.innerText = ''
             }
         }, 300)
+
+        const time = document.getElementById('time')
+        setInterval(() => {
+            const currentDate = new Date()
+            time.innerText = `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
+        }, 1000)
     </script>
 </body>
 </html>
